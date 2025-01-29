@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/hagrid-trial");
+@import url("https://fonts.cdnfonts.com/css/hingar-bingar");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: #0c30ae;
+  padding-right: 3%;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.logo span:first-child {
+  font-family: "Bingar DEMO" !important;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.logo span:last-child {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+/* Left Section with Border Right */
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 20px;
+  border-right: 2px solid #ddd;
+}
+.middleNav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-bottom: 1px solid;
+}
+.middleNav span {
+  visibility: hidden;
+}
+
+/* Right Section (Icons) */
+.navbar-right {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.navbar-right img {
+  cursor: pointer;
+  height: 14px;
+  width: 30px;
+}
+
+/* Ticker Container */
+.ticker-container {
+  font-family: "Bingar DEMO" !important;
+  font-weight: 800;
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateX(20%) translateY(20%) rotate(37deg);
+  overflow: hidden;
+  width: 300px;
+  height: 45px;
+  background-color: #19ec60;
+  display: flex;
+  align-items: center;
+}
+
+/* Ticker */
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  text-transform: uppercase;
+  animation: ticker-scroll 6s linear infinite;
+}
+
+.ticker p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #041c0c;
+}
+
+/* Ticker Animation */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero {
+  background: #0c30ae;
+  color: white;
+  padding: 2rem 5%;
+}
+.parent {
+  font-family: "Hagrid Trial", sans-serif;
+  max-width: 1350px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 0px;
+  align-items: center;
+  justify-items: start;
+  position: relative;
+}
+
+.parent div {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.div1,
+.div2,
+.div3 {
+  font-family: "Hagrid Text Trial", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 10vw, 10rem);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 5;
+}
+.div2 {
+  grid-area: 2 / 2 / 3 / 5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  width: 130%;
+}
+.div3 {
+  grid-area: 3 / 3 / 4 / 5;
+}
+/*.div5 {
+  grid-area: 4 / 4 / 5 / 5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+ .div5 img {
+  height: 120px;
+  width: 130px;
+  border-radius: 30px;
+} */
+.div5 {
+  /* grid-area: 5 / 3 / 5 / 6; */
+  grid-area: 4 / 3 / 6 / 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 15px;
+  width: 100%;
+  /* flex-wrap: wrap; */
+}
+
+.div5 img {
+  height: auto;
+  width: clamp(80px, 10vw, 130px); /* Responsive width */
+  max-width: 100%; /* Prevent overflow */
+  border-radius: 30px;
+}
+
+.div1 span:last-child {
+  font-size: 12px;
+  /* margin-left: -30px; */
+}
+.div2 p {
+  width: 100%;
+  max-width: 250px;
+  min-height: 89.81px;
+  font-size: 12px;
+  font-family: "Bingar DEMO" !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #adbcf0;
+  display: block;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: wrap;
+  text-transform: none !important;
+}
+.div4 {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  grid-area: 2 / 1 / 6 / 3;
+}
+
+.div4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.titles {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    text-align: left;
+  }
+  /* .titles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .titles h1,
+  .titles h2 {
+    display: block;
+    font-family: "Hagrid Text Trial", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 11rem);
+    line-height: 1.2;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .titles p {
+    text-transform: lowercase;
+  } */
+  .div5 {
+    justify-content: center;
+  }
+  .div5 img {
+    width: clamp(120px, 20vw, 250px); /* Responsive width */
+  }
+  .titles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 100%;
+    text-align: left; /* Align left for readability */
+    padding: 10px;
+  }
+
+  .titles h1,
+  .titles h2 {
+    display: block;
+    font-family: "Hagrid Text Trial", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 6rem); /* Adjust max size for mobile */
+    line-height: 1.2;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .titles p {
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Text scales better */
+    max-width: 90%;
+    text-transform: lowercase;
+    line-height: 1.5;
+  }
+
+  .div1,
+  .div2,
+  .div3 {
+    font-size: clamp(2rem, 5vw, 6rem);
+    text-align: center;
+    grid-area: unset;
+    display: none;
+  }
+
+  .div1 {
+    grid-area: unset;
+  }
+  .div1 span:last-child {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  .div2 {
+    grid-area: unset;
+    width: fit-content;
+    justify-content: center;
+  }
+
+  .div3 {
+    grid-area: unset;
+  }
+  .div4 {
+    grid-area: unset;
+    margin: 0 auto;
+    display: none;
+  }
+  .div5 {
+    grid-area: unset;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .div1,
+  .div2,
+  .div3 {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    text-align: center;
+  }
+
+  .div4 {
+    max-width: 80%;
+  }
+} */
+@media (max-width: 768px) {
+  .titles {
+    text-align: center; /* Center align on smaller screens */
+  }
+
+  .titles h1,
+  .titles h2 {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+
+  .div5 {
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 20px;
+  }
+
+  .div5 img {
+    width: clamp(60px, 20vw, 100px);
+    border-radius: 20px;
+  }
+  .middleNav {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .ticker-container {
+    right: 45px;
+    top: 50%;
+    transform: translateX(27%) translateY(-4%) rotate(37deg);
+    width: 220px;
+    height: 30px;
+  }
+  .ticker p {
+    font-size: 12px;
+  }
+}
+/* @media (max-width: 480px) {
+  .div1,
+  .div2,
+  .div3 {
+    font-size: clamp(1.2rem, 8vw, 3rem);
+  }
+
+  .div4 {
+    max-width: 90%;
+  }
+} */
+
+.images {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.images img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.work {
+  background: #00ff00;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.work h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.work span {
+  font-weight: 900;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid div {
+  text-align: left;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}

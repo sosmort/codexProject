@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Design</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span>Iner.</span>
+            <span>agency</span>
+        </div>
+        <div class="ticker-container">
+            <div class="ticker">
+                <p>Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design</p>
+                <p>Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design * Ui/ux Design</p>
+            </div>
+        </div>
+        <div class="middleNav"><span>Hidden element</span><span>Hidden element</span></div>
+        <div class="navbar-right">
+            <img src="assets/Group 461.svg" alt="cart">
+            <img src="assets/Group 459.png" alt="Hamburger" style=" width: 23px;height: 10px;">
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="parent">
+            <div class="div1"> <span>your vision</span>
+                <span>high quality</span>
+            </div>
+            <div class="div2"><span>Our *</span>
+                <p>I craft websites that align wit your brand
+                    and engage your audience – creating
+                    meaningful and memorable experiences</p>
+            </div>
+            <div class="div3"> <span>design</span></div>
+            <div class="titles">
+                <h1>your vision</h1>
+                <h2>our design</h2>
+                <p>I craft websites that align wit your brand
+                    and engage your audience – creating
+                    meaningful and memorable experiences</p>
+            </div>
+            <div class="div5"><img src="assets/Casual Office or Café Gathering.png" alt="img3">
+                <img src="assets/Young Professionals Collaborating in Office@2x.png" alt="img3">
+                <img src="assets/Fashionable Young Man in Social Setting.png" alt="img3">
+            </div>
+            <div class="div4"><img src="assets/Casual Networking Event in Monochrome.png" alt="images"> </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="container">
+            <h2>LET'S <span>WORK</span> TOGETHER</h2>
+            <div class="contact">
+                <img src="assets/Group 461.svg" alt="Contact Icon">
+                <p>info@workmail.com</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Intro</h3>
+                <p>We design stunning experiences.</p>
+            </div>
+            <div>
+                <h3>Services</h3>
+                <p>Branding, UI/UX, Development</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Aston Agency, Salt Lake, USA</p>
+            </div>
+        </div>
+        <div class="socials">
+            <a href="#"><img src="assets/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="assets/Facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="assets/Dribbble.png" alt="Dribbble"></a>
+            <a href="#"><img src="assets/Behance.png" alt="Behance"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.timeline()
+                .from(".navbar-right img", { opacity: 0, y: 50, duration: 1, ease: "power2.out", stagger: 0.3 })
+                .from(".div1 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out", stagger: 0.3 })
+                .from(".div2 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out" }, "-=0.5")
+                .from(".div2 p", { opacity: 0, x: -30, duration: 1, ease: "power2.out" }, "-=0.8")
+                .from(".div3 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out" }, "-=0.5");
+
+            gsap.from(".div4 img", { opacity: 0, scale: 0.8, duration: 1.5, ease: "power3.out", delay: 0.5 });
+
+            gsap.from(".div5 img", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 1.2,
+                stagger: 0.3,
+                ease: "power3.out",
+                delay: 0.5
+            });
+
+            gsap.from(".titles h1, .titles h2", {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                ease: "power2.out",
+                stagger: 0.3
+            });
+
+            gsap.from(".titles p", { opacity: 0, y: 30, duration: 1, ease: "power2.out", delay: 0.3 });
+        });
+    </script>
+
+</body>
+
+</html>
