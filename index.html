@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma Design</title>
+    <link rel="stylesheet/scss" href="styles.scss">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -56,36 +57,60 @@
     </section>
     <section class="work">
         <div class="container">
-            <h2>LET'S <span>WORK</span> TOGETHER</h2>
-            <div class="contact">
-                <img src="assets/Group 461.svg" alt="Contact Icon">
-                <p>info@workmail.com</p>
+            <div class="work_div1"><span>let's</span><img src="assets/Union-1.png" alt="flech"> </div>
+            <div class="work_div2"><img src="assets/Collaborate with Webflow.png" alt="collaboration"> <span>work</span>
             </div>
+            <div class="work_div3"><span>together</span> </div>
+        </div>
+        <div class="collaboration_image">
+            <img src="assets/Collaborate with Webflow.png" alt="collaboration">
+        </div>
+        <div class="contact">
+            <img src="assets/Group 480.png" alt="contact">
+            <p>contact : info@workmail.com</p>
         </div>
     </section>
     <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>Intro</h3>
-                <p>We design stunning experiences.</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2><span>Inter.</span><span>agency</span></h2>
             </div>
-            <div>
-                <h3>Services</h3>
-                <p>Branding, UI/UX, Development</p>
+            <div class="footer-section links">
+                <div class="column">
+                    <h3>PAGES</h3>
+                    <ul>
+                        <li>Home</li>
+                        <li>Work</li>
+                        <li>Agency</li>
+                        <li>Team</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>SERVICES</h3>
+                    <ul>
+                        <li>Services</li>
+                        <li>Team</li>
+                        <li>Clients</li>
+                        <li>Careers</li>
+                        <li>Project Index</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h3>Contact</h3>
-                <p>Aston Agency, Salt Lake, USA</p>
+            <div class="footer-section agency">
+                <h3>ANTON AGENCY<br>MIAMI, USA<br>SALT LAKE, USA</h3>
             </div>
         </div>
         <div class="socials">
-            <a href="#"><img src="assets/Instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="assets/Facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="assets/Dribbble.png" alt="Dribbble"></a>
-            <a href="#"><img src="assets/Behance.png" alt="Behance"></a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">FACEBOOK</a>
+            <a href="#">LINKEDIN</a>
+            <a href="#">DRIBBBLE</a>
+            <a href="#">BEHANCE</a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -94,7 +119,17 @@
                 .from(".div1 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out", stagger: 0.3 })
                 .from(".div2 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out" }, "-=0.5")
                 .from(".div2 p", { opacity: 0, x: -30, duration: 1, ease: "power2.out" }, "-=0.8")
-                .from(".div3 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out" }, "-=0.5");
+                .from(".div3 span", { opacity: 0, y: 50, duration: 1, ease: "power2.out" }, "-=0.5")
+                .from(".work_div1 span, .work_div1 img", { opacity: 0, y: 30, duration: 0.7, ease: "power2.out", stagger: 0.2 }, "-=0.4")
+                .from(".work_div2 img, .work_div2 span", { opacity: 0, y: 30, duration: 0.7, ease: "power2.out" }, "-=0.5")
+                .from(".work_div3 span", { opacity: 0, y: 30, duration: 0.7, ease: "power2.out" }, "-=0.5")
+                .from(".collaboration_image img", { opacity: 0, scale: 0.9, duration: 1, ease: "power3.out", delay: 0.2 })
+                .from(".contact img", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out", delay: 0.1 })
+                .from(".contact p", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out", delay: 0.1 })
+                .from(".footer-section", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out", delay: 0.1 })
+                .from(".socials", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out", delay: 0.1 })
+
+
 
             gsap.from(".div4 img", { opacity: 0, scale: 0.8, duration: 1.5, ease: "power3.out", delay: 0.5 });
 
